@@ -9,11 +9,11 @@ $0 time mountpoint [mountpoint ...]"
   exit 1
 }
 
-t=$1
-shift
 cdir=$(pwd)
 fstest_dir=/opt/fstest
 (( $# <1 )) && usage
+t=$1
+shift
 ts=$(date +%s)
 while (( ts + t >= $(date +%s) )); do
   d=$(date +%F_%T)
