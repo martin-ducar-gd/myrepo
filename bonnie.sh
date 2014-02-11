@@ -26,7 +26,7 @@ while (( ts + t >= $(date +%s) )); do
     cd $mount
     mkdir -p $mount/$(hostname)
     cd $mount/$(hostname)
-    bonnie++ -d $mount/$(hostname) -c 2 -s 3072 -n 1 -r 3072 -x 10 -u 0 -g 0 -q -D 2>&1 1>$results_dir/bonnie/$d/$mount/results.out &
+    bonnie++ -d $mount/$(hostname) -c 2 -s 768 -n 1 -r 768 -x 10 -u 0 -g 0 -q -D 2>&1 1>$results_dir/bonnie/$d/$mount/results.out &
     pids="$pids|$!"
   done
   pids=${pids#|}
