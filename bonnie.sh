@@ -23,7 +23,7 @@ while (( ts + t >= $(date +%s) )); do
   rm $results_dir/bonnie/$d/results.out 2>/dev/null
   touch $results_dir/bonnie/$d/results.out
   pids=""
-  for mount in $@; do
+  for mount in $mountpoints; do
     mkdir -p $results_dir/bonnie/$d/$mount || exit 1
     cd $mount
     mkdir -p $mount/$(hostname)

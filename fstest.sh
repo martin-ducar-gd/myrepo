@@ -20,7 +20,7 @@ while (( ts + t >= $(date +%s) )); do
   mkdir -p $results_dir/fstest_run/$d
   rm $results_dir/fstest_run/$d/results.out 2>/dev/null
   touch $results_dir/fstest_run/$d/results.out
-  for mount in $@; do
+  for mount in $mountpoints; do
     mkdir -p $results_dir/fstest_run/$d/$mount || exit 1
     cd $mount
     mkdir -p $mount/$(hostname)/fstest
