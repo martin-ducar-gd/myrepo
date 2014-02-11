@@ -1,0 +1,2 @@
+mountpoints="/mnt/Estore /mnt/PTemplates /mnt/ETL /mnt/Lookups /mnt/Upload /mnt/WWW /mnt/Connectors /mnt/ELogs /mnt/PStaging /mnt/Exporter /mnt/Staging"
+results_dir=$(pwd)
