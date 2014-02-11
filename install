@@ -1,0 +1,12 @@
+#!/bin/bash
+yum install -y bonnie++ libacl-devel
+mkdir -p /opt/fstest
+dir=`pwd`
+cd /opt/fstest 
+wget http://tuxera.com/sw/qa/pjd-fstest-20090130-RC.tgz || exit 1
+tar xzf pjd-fstest-20090130-RC.tgz
+mv pjd-fstest-20090130-RC/* .
+rm -rf pjd-fstest-20090130-RC
+rm -f pjd-fstest-20090130-RC.tgz
+make || exit 1
+cd $dir
