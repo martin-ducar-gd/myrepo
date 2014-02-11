@@ -32,6 +32,7 @@ while (( ts + t >= $(date +%s) )); do
         $j
       done
     done
+    rm -rf $mount/$(hostname)/fstest/*
     failed=$(grep "not ok" $results_dir/fstest_run/$d/$mount/results.out | wc -l)
     passed=$(grep "ok" $results_dir/fstest_run/$d/$mount/results.out | wc -l)
     echo "Status, failed tests: $failed, passed tests: $passed"
